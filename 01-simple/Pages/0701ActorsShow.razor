@@ -6,11 +6,11 @@
 <h1>Actors</h1>
 <br />
 <table>
-    <tr>
+    <th>
         <td>First name</td>
         <td>Last name</td>
         <td>IMDB score</td>
-    </tr>
+    </th>
     @foreach (Actor act in filmCrew)
     {
         <tr>
@@ -32,35 +32,28 @@
 
     private double avgIMDB;
 
-    private Actor movieStar1 = new Actor()
+    private Actor[] filmCrew = new Actor[3];
+
+    protected override async Task OnInitializedAsync()
+    {
+        filmCrew[0] = new Actor()
         {
             FirstName = "John",
             LastName = "Goodman",
             ImdbMark = 9.7
         };
-
-    private Actor movieStar2 = new Actor()
+        filmCrew[1] = new Actor()
+        {
+            LastName = "Costner",
+            ImdbMark = 9.3,
+            FirstName = "Kevin"
+        };
+        filmCrew[2] = new Actor()
         {
             LastName = "De Niro",
             ImdbMark = 9.4,
             FirstName = "Robert"
         };
-
-
-    private Actor theBadGuy = new Actor()
-        {
-            LastName = "Spacey",
-            ImdbMark = 9.6,
-            FirstName = "Kevin"
-        };
-
-    private Actor[] filmCrew = new Actor[3];
-
-    protected override async Task OnInitializedAsync()
-    {
-        filmCrew[0] = movieStar1;
-        filmCrew[1] = movieStar2;
-        filmCrew[2] = theBadGuy;
         await Task.Run(() => filmCrew[0].ImdbMark = filmCrew[0].ImdbMark+0  );
     }
 
