@@ -5,11 +5,11 @@
 <div><span>first name: </span>@_actor.FirstName</div>
 <div><span>last name: </span>@_actor.LastName</div>
 <div><span>country: </span>@_actor.CountryCode</div>
-<div><span>date of birth: </span> @_actor.DateOfBirth?.ToString("MM/dd/yyyy")</div>
+<div><span>date of birth: </span> <input type="date" @bind="_actor.DateOfBirth" ></div>
 
 @code 
 {
-    Actor _actor = new Actor()
+    private Actor _actor = new Actor()
             {
                 Id = 3,
                 FirstName = "Robert",
