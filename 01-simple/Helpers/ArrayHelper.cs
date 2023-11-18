@@ -2,15 +2,6 @@
 {
     public class ArrayHelper
     {
-        public static string ElementsToString(byte[] arr)
-        {
-            string res = "";
-            for (int i = 0; i < arr.Length; i++)
-            {
-                res += arr[i] + " ";
-            }
-            return res;
-        }
 
         public static string ElementsToString(string[] arr)
         {
@@ -38,6 +29,15 @@
             foreach (double x in arr)
                 r += x;
             return r/arr.Length;
+        }
+        public static string ElementsToString<T>(T[] arr) 
+        {
+            string res = "";
+            for (int i = 0; i < arr.Length; i++)
+            {
+                res += arr[i] + " ";
+            }
+            return res;
         }
 
     }

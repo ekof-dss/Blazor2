@@ -16,7 +16,7 @@ Output:
 
     private void Execute()
     {
-        string[] strA = new string[40];
+        @* string[] strA = new string[40];
         strA[2] = "mickey";
         strA[3] = "mouse";
         message = "strA: " + strA.ToString() + Environment.NewLine;
@@ -30,7 +30,7 @@ Output:
         message += "strA.Length: " + strA.Length + Environment.NewLine;
         System.Console.WriteLine("strA.Length: " + strA.Length);
         message += Environment.NewLine;
-        System.Console.WriteLine();
+        System.Console.WriteLine(); 
 
         byte[] bytA = new byte[10];
         bytA[2] = 42;
@@ -48,7 +48,7 @@ Output:
         message += "bytA.Length: " + bytA.Length + Environment.NewLine;
         System.Console.WriteLine("bytA.Length: " + bytA.Length);
         message += Environment.NewLine;
-        System.Console.WriteLine();
+        System.Console.WriteLine(); *@
 
         String s = " special ";
         String[] adj = { s, " very ", " much " };
@@ -81,6 +81,6 @@ Output:
         System.Console.WriteLine("indexExpression: " + indexExpression);
         System.Console.WriteLine("numbers[indexExpression]: " + numbers[indexExpression]);
         message += Environment.NewLine;
-        System.Console.WriteLine();
+        System.Console.WriteLine(); 
     }
 }

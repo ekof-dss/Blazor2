@@ -18,13 +18,6 @@ Output:
 
     private void Execute()
     {
-        byte[] bytA = new byte[30];
-        bytA[2] = 45;
-        for (int i = 3; i < bytA.Length; i++)
-            bytA[i] = (byte)(2 * i);
-        message += "bytA: " + DSS.Helpers.ArrayHelper.ElementsToString(bytA) + Environment.NewLine;
-        Console.WriteLine(message);
-
         String spec = " special";
         String[] seasons = { " spring", " autumn", spec + " winter", " summer" };
         message += "seasons: " + ArrayHelper.ElementsToString(seasons) + Environment.NewLine;
@@ -42,5 +35,13 @@ Output:
         strA[6] = "goofy";
         message += "strA: " + ArrayHelper.ElementsToString(strA) + Environment.NewLine;
         Console.WriteLine(message);
+
+        byte[] bytA = new byte[30];
+        bytA[2] = 45;
+        for (int i = 3; i < bytA.Length; i++)
+            bytA[i] = (byte)(2 * i);
+        message += "bytA: " + ArrayHelper.ElementsToString<byte>(bytA) + Environment.NewLine;
+        Console.WriteLine(message);
+
     }
 }
