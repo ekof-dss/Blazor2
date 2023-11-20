@@ -11,6 +11,6 @@
     protected override async Task OnInitializedAsync()
     {
         message = "Hello world!!!";
-        await Task.Run(() => message=message+"" );
+        await Task.CompletedTask;
     }
 }

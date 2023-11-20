@@ -30,7 +30,7 @@
     private async Task<Actor[]> GetTopActors()
     {
         var actors = await _actorService.GetActors();
-        return actors.Take(4).ToArray();
+        return actors.Take(3).ToArray();
     }
 
     private void NavigateTo(Actor actor)

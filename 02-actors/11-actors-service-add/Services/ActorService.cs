@@ -15,6 +15,7 @@ namespace project.Services
         private readonly IMessagingService _messagingService;
 
         private List<Actor> _actors = null;
+        
         public ActorService(HttpClient httpClient, IMessagingService messagingService)
         {
             _httpClient = httpClient ?? throw new ArgumentNullException(

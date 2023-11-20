@@ -15,6 +15,7 @@
     {
         Messages = messagingService.Get();
         messagingService.OnMessagesChanged += MessagesChanged;
+        messagingService.OnMessagesChanged += MC2;
     }
 
     private async void MessagesChanged(object sender, List<string> newMessages)
@@ -25,6 +26,15 @@
             // tell blazor to re-render the UI
             StateHasChanged();
         });
+    }
+
+    private async void MC2(object sender, List<string> newMessages)
+    {
+        Console.WriteLine("---");
+        foreach(string s in newMessages)
+            Console.Write(s + " "); 
+        Console.WriteLine( "---");
+        await Task.CompletedTask;
     }
 
     private async void clearMessages()
